@@ -20,7 +20,7 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(getClass().getResource("main_screen.fxml"));
         primaryStage.setTitle("BetaniaDB");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
 

@@ -1,5 +1,7 @@
 package com.asdamp.betaniaDB;
 
+import java.util.ArrayList;
+
 /**
  * Created by anton on 17/05/2017.
  */
@@ -17,8 +19,13 @@ public class Contribuente {
     private String metodoPagamento;
     private String modalitaPagamento;
     private String email;
+    private ArrayList<Pagamento> pagamenti;
 
-    public Contribuente(String nome, int id, String via, String civico, String CAP, String citta, String provincia, String telefono, String cellulare, boolean sostenitoreIntestatario, String metodoPagamento, String modalitaPagamento, String email) {
+    public ArrayList<Pagamento> getPagamenti() {
+        return pagamenti;
+    }
+
+    public Contribuente(String nome, int id, String via, String civico, String CAP, String citta, String provincia, String telefono, String cellulare, boolean sostenitoreIntestatario, String metodoPagamento, String modalitaPagamento, String email, ArrayList<Pagamento> pagamenti) {
         this.nome = nome;
         this.id = id;
         this.via = via;
@@ -32,6 +39,7 @@ public class Contribuente {
         this.metodoPagamento = metodoPagamento;
         this.modalitaPagamento = modalitaPagamento;
         this.email = email;
+        this.pagamenti=pagamenti;
     }
 
     public String getNome() {
